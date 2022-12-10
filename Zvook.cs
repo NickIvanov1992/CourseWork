@@ -9,13 +9,27 @@ namespace MyPets
 {
     public class Zvook
     {
-        public static void Play_puk()
+        
+        public static void Play (string voice)
         {
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.IO.Stream resourceStream =
-            assembly.GetManifestResourceStream(@"MyPets.puk.wav");
+            assembly.GetManifestResourceStream(voice);
             SoundPlayer player = new SoundPlayer(resourceStream);
             player.Play();
+        }
+
+        public static string str = "";
+        public static string Voice(string voice)
+        {
+            if (voice != str)
+            {
+            Voices voices = new Voices();
+            string sound = voices.GetValue(voice);
+            Play(sound); 
+            str = voice;
+            }
+            return str;
         }
     }
 }

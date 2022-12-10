@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Health>70</Health>
+  <Eat>70</Eat>
+  <Fun>65</Fun>
+</Pet>/Pet>

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace MyPets
 
@@ -10,23 +12,36 @@ namespace MyPets
     [Serializable]
     public class Pet
     {
-        int Health = 70;
-        int Eat = 70;
-        int Fun = 70;
-        Random random = new Random();
+        public int Health { get; set; } 
+        public int Eat { get; set; } 
+        public int Fun { get; set; }
 
+        public Stopwatch sWatch = new Stopwatch();     // покажет время жизни Кота
+
+        public Pet(int health, int eat, int fun)
+        {
+            Health = health;
+            Eat = eat;
+            Fun = fun;
+        }
+        public Pet()
+        {
+
+        }
+
+        Random random = new Random();       // хаотичное уменьшение прогресс-баров
         //повышаем значения
         public int Give_Pivo()
         {
-            return Eat = Eat + 10;
+            return Eat += 10;
         }
         public int To_Play()
         {
-            return Fun = Fun + 10;
+            return Fun += 10;
         }
         public int Treat()
         {
-            return Health = Health + 10;
+            return Health +=10;
         }
        
         
@@ -35,13 +50,13 @@ namespace MyPets
             switch (random.Next(0, 5))
             {
                 case (1):
-                    Health = Health - 5;
+                    Health -= 5;
                     break;
                 case (2):
-                    Eat = Eat - 5;
+                    Eat -= 5;
                     break;
                 case (3):
-                    Fun = Fun - 5;
+                    Fun -= 5;
                     break;
             }
             if (Eat == 0 || Health == 0)
@@ -75,7 +90,7 @@ namespace MyPets
             {
                 return "Мне скучно...";
             }
-
+            
             return "У меня всё хорошо:)";
         }
 
@@ -91,6 +106,7 @@ namespace MyPets
         {
             return Fun;
         }
+        
     }
 
 }

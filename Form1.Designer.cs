@@ -58,7 +58,7 @@
             this.progressBar_eat.Size = new System.Drawing.Size(150, 27);
             this.progressBar_eat.Step = 5;
             this.progressBar_eat.TabIndex = 0;
-            this.progressBar_eat.Value = 70;
+            
             this.progressBar_eat.Click += new System.EventHandler(this.progressBar_eat_Click_1);
             // 
             // progressBar_fun
@@ -71,7 +71,7 @@
             this.progressBar_fun.Size = new System.Drawing.Size(150, 27);
             this.progressBar_fun.Step = 5;
             this.progressBar_fun.TabIndex = 1;
-            this.progressBar_fun.Value = 70;
+            
             this.progressBar_fun.Click += new System.EventHandler(this.progressBar_fun_Click);
             // 
             // progressBar_health
@@ -84,7 +84,7 @@
             this.progressBar_health.Size = new System.Drawing.Size(150, 27);
             this.progressBar_health.Step = 5;
             this.progressBar_health.TabIndex = 2;
-            this.progressBar_health.Value = 70;
+            
             this.progressBar_health.Click += new System.EventHandler(this.progressBar_health_Click);
             // 
             // button1

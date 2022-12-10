@@ -1,7 +1,9 @@
 ﻿using MyPets;
 using System;
 using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace MyPets
 {
@@ -14,11 +16,14 @@ namespace MyPets
         private void button2_Click(object sender, EventArgs e)    // кнопка загрузить сохранку
         {
             try
-            {
-                this.Hide();
-                Form1 gameform = new Form1();
-                GameData data = GameData.Load(@"C:\Users\Admin\source\repos\practic\MyPets\Save\gamedata.xml");
-                gameform.Show();
+            {             
+                using (FileStream fs = new FileStream("gamedata.json", FileMode.OpenOrCreate))
+                {
+                    this.Hide();
+                    Pet? Cat = JsonSerializer.Deserialize<Pet>(fs);
+                    Form1 gameform = new Form1(Cat);
+                    gameform.Show();
+                }                 
             }
             catch (FileNotFoundException)
             {
@@ -33,13 +38,16 @@ namespace MyPets
         {
 
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        
+        public void button1_Click_1(object sender, EventArgs e)
         {
-            Form1 gameform = new Form1();
+            Pet Cat = new Pet(70, 70, 70);
+            Form1 gameform = new Form1(Cat);
             gameform.Show();                  // запуск игры
             this.Hide();
+ 
         }
+ 
         private void button3_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
