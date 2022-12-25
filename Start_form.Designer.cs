@@ -42,7 +42,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Новая Игра";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.NewGame_Click_1);
             // 
             // button2
             // 
@@ -64,7 +64,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button3.Click += new System.EventHandler(this.Exit_Click_1);
             // 
             // Start_form
             // 
@@ -79,6 +79,8 @@
             this.Name = "Start_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start_form";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Start_form_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Start_form_MouseMove);
             this.ResumeLayout(false);
 
         }

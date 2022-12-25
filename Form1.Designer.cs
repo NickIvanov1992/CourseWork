@@ -44,6 +44,8 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Live_time = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +60,6 @@
             this.progressBar_eat.Size = new System.Drawing.Size(150, 27);
             this.progressBar_eat.Step = 5;
             this.progressBar_eat.TabIndex = 0;
-            this.progressBar_eat.Value = 70;
-            this.progressBar_eat.Click += new System.EventHandler(this.progressBar_eat_Click_1);
             // 
             // progressBar_fun
             // 
@@ -71,8 +71,6 @@
             this.progressBar_fun.Size = new System.Drawing.Size(150, 27);
             this.progressBar_fun.Step = 5;
             this.progressBar_fun.TabIndex = 1;
-            this.progressBar_fun.Value = 70;
-            this.progressBar_fun.Click += new System.EventHandler(this.progressBar_fun_Click);
             // 
             // progressBar_health
             // 
@@ -84,12 +82,10 @@
             this.progressBar_health.Size = new System.Drawing.Size(150, 27);
             this.progressBar_health.Step = 5;
             this.progressBar_health.TabIndex = 2;
-            this.progressBar_health.Value = 70;
-            this.progressBar_health.Click += new System.EventHandler(this.progressBar_health_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.Location = new System.Drawing.Point(447, 72);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
@@ -149,32 +145,31 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 4000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(254, 178);
+            this.trackBar1.Location = new System.Drawing.Point(264, 226);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.trackBar1.Maximum = 20000;
             this.trackBar1.Minimum = 250;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(167, 45);
             this.trackBar1.TabIndex = 11;
-            this.trackBar1.Value = 7000;
+            this.trackBar1.Value = 10000;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(264, 217);
+            this.label2.Location = new System.Drawing.Point(272, 265);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 16);
             this.label2.TabIndex = 12;
             this.label2.Text = "Скорость времени 1000 ms";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // imageList1
             // 
@@ -194,10 +189,20 @@
             this.imageList1.Images.SetKeyName(10, "happy cat1.jpg");
             this.imageList1.Images.SetKeyName(11, "hungry cat 1.png");
             this.imageList1.Images.SetKeyName(12, "scary cat1.jpg");
+            this.imageList1.Images.SetKeyName(13, "beer dog.jpg");
+            this.imageList1.Images.SetKeyName(14, "dog calm.png");
+            this.imageList1.Images.SetKeyName(15, "dog frowns.jpg");
+            this.imageList1.Images.SetKeyName(16, "dog_overeat.jpg");
+            this.imageList1.Images.SetKeyName(17, "fail_dog.jpg");
+            this.imageList1.Images.SetKeyName(18, "gaming dog.jpg");
+            this.imageList1.Images.SetKeyName(19, "happy dog.jpg");
+            this.imageList1.Images.SetKeyName(20, "hello_dog.png");
+            this.imageList1.Images.SetKeyName(21, "scary_dog.jpg");
+            this.imageList1.Images.SetKeyName(22, "grave_dog.jpg");
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button5.Location = new System.Drawing.Point(447, 217);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button5.Name = "button5";
@@ -216,7 +221,22 @@
             this.pictureBox1.Size = new System.Drawing.Size(214, 236);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Live_time
+            // 
+            this.Live_time.Enabled = true;
+            this.Live_time.Interval = 1000;
+            this.Live_time.Tick += new System.EventHandler(this.Live_time_Tick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(271, 191);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 32);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "       Скорость игры\r\nАктивный        Режим сна";
             // 
             // Form1
             // 
@@ -224,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(583, 346);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.trackBar1);
@@ -244,6 +265,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyPET\'S";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -252,21 +275,22 @@
         }
 
         #endregion
-
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private ImageList imageList1;
-        private Label label1;
-        private Label label2;
-        private PictureBox pictureBox1;
         private ProgressBar progressBar_eat;
         private ProgressBar progressBar_fun;
         private ProgressBar progressBar_health;
-        private System.Windows.Forms.Timer timer1;
         private TrackBar trackBar1;
+        internal PictureBox pictureBox1;
+        internal ImageList imageList1;
+        internal Button button1;
+        internal Button button2;
+        internal Button button3;
+        internal Button button4;
+        internal Button button5;
+        internal Label label1;
+        internal System.Windows.Forms.Timer timer1;
+        internal System.Windows.Forms.Timer Live_time;
+        private Label label3;
+        internal Label label2;
     }
 
 

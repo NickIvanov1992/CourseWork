@@ -36,3 +36,5 @@ C:\Users\Admin\Desktop\MyPets\obj\Debug\net6.0-windows\refint\MyPets.dll
 C:\Users\Admin\Desktop\MyPets\obj\Debug\net6.0-windows\MyPets.pdb
 C:\Users\Admin\Desktop\MyPets\obj\Debug\net6.0-windows\MyPets.genruntimeconfig.cache
 C:\Users\Admin\Desktop\MyPets\obj\Debug\net6.0-windows\ref\MyPets.dll
+C:\Users\Admin\Desktop\MyPets\obj\Debug\net6.0-windows\MyPets.EnterPetName.resources
+C:\Users\Admin\Desktop\MyPets\obj\Debug\net6.0-windows\MyPets.SelectPet.resources
