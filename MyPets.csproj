@@ -9,16 +9,41 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="puk.wav" />
+    <None Remove="Voice\golovabolit.wav" />
+    <None Remove="Voice\horosho.wav" />
+    <None Remove="Voice\igrat.wav" />
+    <None Remove="Voice\kushat.wav" />
+    <None Remove="Voice\lechitsa.wav" />
+    <None Remove="Voice\lopnu.wav" />
+    <None Remove="Voice\pohorons.wav" />
+    <None Remove="Voice\privetik.wav" />
+    <None Remove="Voice\skuchno.wav" />
+    <None Remove="Voice\spasibozapivo.wav" />
+    <None Remove="Voice\ubezhal.wav" />
+    <None Remove="Voice\zhrat.wav" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="puk.wav" />
+    <EmbeddedResource Include="Voice\golovabolit.wav" />
+    <EmbeddedResource Include="Voice\horosho.wav" />
+    <EmbeddedResource Include="Voice\igrat.wav" />
+    <EmbeddedResource Include="Voice\kushat.wav" />
+    <EmbeddedResource Include="Voice\lechitsa.wav" />
+    <EmbeddedResource Include="Voice\lopnu.wav" />
+    <EmbeddedResource Include="Voice\pohorons.wav" />
+    <EmbeddedResource Include="Voice\privetik.wav" />
+    <EmbeddedResource Include="Voice\skuchno.wav" />
+    <EmbeddedResource Include="Voice\spasibozapivo.wav" />
+    <EmbeddedResource Include="Voice\ubezhal.wav" />
+    <EmbeddedResource Include="Voice\zhrat.wav" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Save\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
